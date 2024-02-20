@@ -10,6 +10,7 @@
 /* The root element is where we create variables for our file */
 :root{
     /* Basic Theme Colors */
+    /* these are so they have names -- don't have to retype every hex, you can change all at once if they're all named "--pink" */
     --red: #bf3636;
     --orange: #d04936;
     --yellow: #ffcc14;
@@ -55,19 +56,22 @@
 /* ORGANIZING YOUR STYLES */
 /* -------------------------------------- */
 /* 
-    You want to organize your CSS in a way that makes it easy to find. In this activity, I am adding the basic styles that will be applied to all of the elements on the page at the top of the file, underneath the :root selector and my CSS Variables. After those basic styles, I will add the styles in order by the way they're listed in the HTML, so the header would be first, and the footer would be last, with each section's styles in order between the two.
+    You want to organize your CSS in a way that makes it easy to find. In this activity, 
+    I am adding the basic styles that will be applied to all of the elements on the page 
+    at the top of the file, underneath the :root selector and my CSS Variables. After those 
+    basic styles, I will add the styles in order by the way they're listed in the HTML, so 
+    the header would be first, and the footer would be last, with each section's styles in 
+    order between the two.
 */
 
 /* ------------------------------------ */
 /* GLOBAL CUSTOM STYLES */
 /* ------------------------------------ */
+
 /* ----- */
-/* 
-    TO DO:
-    add the universal CSS selector to the styles below
-*/
+/*  universal CSS selector to the styles below -- USE Asterisk */
 /* ----- */
-{
+*{
     font-family: var(--fonts);
     line-height: 1.3;
     color: var(--dk-gray);
@@ -75,12 +79,9 @@
 }
 
 /* ----- */
-/* 
-    TO DO:
-    select the body by its tag name
-*/
+/* select the body by its tag name -- Use the tag name*/
 /* ----- */
-{
+body{
     box-sizing: border-box;
     background-color: var(--lt-gray);
 }
@@ -89,15 +90,12 @@
 /* HEADER/FOOTER SHARED STYLES */
 /* --------------- */
 /* ----- */
-/* 
-    TO DO:
-    select the header and footer by tag name
-*/
+/*  select the header AND footer by tag name -- USE COMMA */
 /* ----- */
-{
+header, footer{
     padding: 2rem 1rem;
     background-color: var(--white);
-    width: 100%;
+    width: 100% 2rem;
     max-width: 1200px;
     box-shadow: var(--box-shadow-sm);
 }
@@ -106,12 +104,9 @@
 /* HEADER STYLES */
 /* --------------- */
 /* ----- */
-/* 
-    TO DO:
-    select the header only, by tag name
-*/
+/* select the header only, by tag name */
 /* ----- */
-{
+header{
     margin: 0 auto 2rem auto;
 }
 
@@ -119,24 +114,18 @@
 /* HEADING STYLES */
 /* --------------- */
 /* ----- */
-/* 
-    TO DO:
-    select the h1 tag by tag name
-*/
+/* select the h1 tag by tag name */
 /* ----- */
-{
+h1{
     font-size: 2em;
     margin: 0;
     text-align: center;
 }
 
 /* ----- */
-/* 
-    TO DO:
-    select both the h1 and h2 tags on the page by tag name
-*/
+/* select both the h1 and h2 tags on the page by tag name */
 /* ----- */
-{
+h1, h2{
     grid-column: 1/-1;
     text-align: center;
     font-weight: bold;
@@ -144,23 +133,17 @@
 }
 
 /* ----- */
-/* 
-    TO DO:
-    select the h2 tags by tag name
-*/
+/* select the h2 tags by tag name */
 /* ----- */
-{
+h2{
     font-size: 1.75rem;
     margin: 0.25rem;
 }
 
 /* ----- */
-/* 
-    TO DO:
-    select the h3 tags by tag name
-*/
+/* select the h3 tags by tag name */
 /* ----- */
-{
+h3{
     font-size: 1.5rem;
     margin: 0.25rem;
 }
@@ -168,13 +151,11 @@
 /* --------------- */
 /* UNORDERED LIST STYLES */
 /* --------------- */
+
 /* ----- */
-/* 
-    TO DO:
-    select all of the unordered lists on the page using the tag name selector
-*/
+/* select all of the unordered lists on the page using the tag name selector */
 /* ----- */
-{
+ul{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 12px;
@@ -183,48 +164,38 @@
 /* --------------- */
 /* LINK AND LINK HOVER STYLES */
 /* --------------- */
+
 /* ----- */
-/* 
-    TO DO:
-    select all of the links on the page using the tag name selector
-*/
+/* select all of the links on the page using the tag name selector */
 /* ----- */
-{
+a{
     color: var(--blue);
 }
 
 /* ----- */
-/* 
-    TO DO:
-    select the links on the page when a user hovers over them using the tag name and pseudo-class  selector
-*/
+/* select the links on the page when a user hovers over them using the tag name and pseudo-class  selector */
 /* ----- */
-{
+a:hover{
     text-decoration: none;
 }
 
 /* ----- */
-/* 
-    TO DO:
-    select the links on the page when they have keyboard focus using the tag name and pseudo-class  selector
-*/
+/* select the links on the page when they have keyboard focus using the tag name and pseudo-class  selector */
 /* ----- */
-{
+a:focus {
     text-decoration: none;
-    outline: 4px solid var(--dv-med-blue);
+    outline: 7px solid var(--dv-med-blue);
     outline-offset: 2px;
 }
 
 /* --------------- */
 /* MAIN STYLES */
 /* --------------- */
+
 /* ----- */
-/* 
-    TO DO:
-    select the main element by tag name
-*/
+/* select the main element by tag name */
 /* ----- */
-{
+main{
     width: 100%;
     max-width: 1200px;
     margin: 2rem auto;
@@ -236,13 +207,14 @@
 /* --------------- */
 /* MAIN SECTION STYLES */
 /* --------------- */
+
 /* ----- */
-/* 
-    TO DO:
-    select the sections on the page that are direct descendants to the main by tag names and using the direct descendant selector
-*/
+/*  select the sections on the page that are direct descendants 
+    to the main by tag names and using the direct descendant selector
+    (if just using space, it will do nested sections as well. if we 
+    only want the initial/direct descendants, use the following: > */
 /* ----- */
-{
+main > section{
     display: block;
     width: calc(100% - 2rem);
     max-width: calc(500px - 2rem);
@@ -256,13 +228,11 @@
 /* --------------- */
 /* PARAGRAPH STYLES */
 /* --------------- */
+
 /* ----- */
-/* 
-TO DO:
-select the paragraph elements by tag name
-*/
+/* select the paragraph elements by tag name */
 /* ----- */
-{
+p{
     padding: 1rem; 
     font-size: 1.2rem;
     max-width: 65ch;
@@ -272,13 +242,11 @@ select the paragraph elements by tag name
 /* --------------- */
 /* IMAGE STYLES */
 /* --------------- */
+
 /* ----- */
-/* 
-    TO DO:
-    select the images and SVGs by tag names
-*/
+/* select the images and SVGs by tag names -- both with a comma */
 /* ----- */
-{
+img, svg{
     display: block;
     width: 100%;
     height: auto;
@@ -288,21 +256,20 @@ select the paragraph elements by tag name
 /* SPAN STYLES */
 /* --------------- */
 /* ----- */
-/* 
-TO DO:
-select all of the spans by tag name
-*/
+/* select all of the spans by tag name */
 /* ----- */
-{
+span{
     display: block;
 }
 
 /* ------------------------------------ */
 /* STYLES BY SECTION IN MAIN */
 /* ------------------------------------ */
+
 /* --------------- */
 /* IMAGE STYLES SECTION CONTENT STYLES */
 /* --------------- */
+
 /* ----- */
 /* 
     TO DO:
@@ -319,12 +286,11 @@ select all of the spans by tag name
 /* NAVIGATION SECTION CONTENT STYLES */
 /* --------------- */
 /* ----- */
-/* 
-    TO DO:
-    select the h2 in the second section using the ID, tag name, and child/descendant selectors
-*/
+/* select the h2 in the second section using the ID, tag name, and child/descendant selectors
+Space means "go inside"    */
+
 /* ----- */
-{
+#image h2{
     padding: 12px 0;
     background-color: var(--green);
     color: var(--white);
