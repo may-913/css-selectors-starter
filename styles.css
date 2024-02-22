@@ -276,7 +276,7 @@ span{
     select the h2 in the first section using the ID, tag name, and child/descendant selectors
 */
 /* ----- */
-{
+#image h2{
     padding: 12px 0;
     background-color: var(--blue);
     color: var(--white);
@@ -287,10 +287,10 @@ span{
 /* --------------- */
 /* ----- */
 /* select the h2 in the second section using the ID, tag name, and child/descendant selectors
-Space means "go inside"    */
+Space means "go inside"; when it's a class you use a . */
 
 /* ----- */
-#image h2{
+{
     padding: 12px 0;
     background-color: var(--green);
     color: var(--white);
